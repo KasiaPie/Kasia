@@ -36,10 +36,9 @@ figure;
 plot(t,y(:,2));
 writematrix([t, y(:,2)],'plots/op_h_2_2.txt', "Delimiter","tab");
 
-% Wyznaczenie dok³adnego punktu pracy
-V_1_op =  y(end,1);
-h_2_op = y(end,2);
-fprintf("V_1:\t%0.4f\nh_2:\t\t%0.4f\n",V_1,h_2);
+fprintf("V_1:\t%0.4f\nh_2:\t\t%0.4f\n",y(end,1),y(end,2));
 
 % Zapisanie punktu pracy
+V_1_op =  V_1;
+h_2_op = h_2;
 save("data/operating_point.mat",'V_1_op','h_2_op','F_1','F_D','tau');
